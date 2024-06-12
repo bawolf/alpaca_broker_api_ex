@@ -2,6 +2,12 @@
 
 Open brokerage accounts, enable crypto and stock trading, and manage the ongoing user experience with Alpaca Broker API
 
+Generated on 2024-06-12 with
+
+```bash
+openapi-generator-cli generate -i https://raw.githubusercontent.com/alpacahq/alpaca-docs/master/oas/broker/openapi.yaml -g elixir -o ./alpaca_broker_api_ex
+```
+
 ## Building
 
 To install the required dependencies and to build the elixir project, run:
