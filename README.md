@@ -37,7 +37,10 @@ You can override the URL of your server (e.g. if you have a separate development
 configuration files).
 
 ```elixir
-config :alpaca_broker_api, base_url: "https://broker-api.sandbox.alpaca.markets"
+config :alpaca_broker_api,
+  base_url: "https://broker-api.sandbox.alpaca.markets",
+  api_client_id: System.get_env("ALPACA_CLIENT_ID"),
+  api_secret: System.get_env("ALPACA_CLIENT_SECRET")
 ```
 
 Multiple clients for the same API with different URLs can be created passing different `base_url`s when calling

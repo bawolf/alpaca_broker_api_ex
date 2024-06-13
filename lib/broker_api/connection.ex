@@ -17,12 +17,6 @@ defmodule BrokerAPI.Connection do
         :base_url, "https://broker-api.sandbox.alpaca.markets"
   """
 
-  @default_base_url Application.compile_env(
-                      :alpaca_broker_api,
-                      :base_url,
-                      "https://broker-api.sandbox.alpaca.markets"
-                    )
-
   @typedoc """
   The list of options that can be passed to new/1.
 
@@ -103,7 +97,7 @@ defmodule BrokerAPI.Connection do
       Keyword.get(
         options,
         :base_url,
-        Application.get_env(:alpaca_broker_api, :base_url, @default_base_url)
+        Application.get_env(:alpaca_broker_api, :base_url)
       )
 
     tesla_options = Application.get_env(:tesla, __MODULE__, [])
